@@ -2,9 +2,9 @@ const punishmentSchema = require("../schemas/punishment-schema")
 
 module.exports = {
     category: "Moderation",
-    description: "Bans a user",
+    description: "Mutes a user",
 
-    permissions: ["ADMINISTRATOR", "BAN_MEMBERS"],
+    permissions: ["ADMINISTRATOR"],
     minArgs: 3,
     expectedArgs: "<user> <duration> <reason>",
     expectedArgsTypes: ["USER", "STRING", "STRING"],
@@ -60,15 +60,21 @@ module.exports = {
         const result = await punishmentSchema.findOne({
             guildId: guild.id,
             userId,
-            type: "ban",
+            type: "mute",
         })
         if(result){
-            return `<@${userId}> is already banned in this server.`
+            return `<@${userId}> is already muted in this server.`
         }
 
         try {
-            const member = await guild.members.ban(userId, {reason})
-            
+            const member = await guild.members.fetch(userId)
+            if(member){
+                const muteRole = guild.roles.cache.find((role) => role.name === "Muted")
+                if (!muteRole){
+                    return "This server does not have a `Muted` role"
+                }
+                member.roles.add(muteRole)
+            }
 
             await new punishmentSchema({
                 userId,
@@ -76,13 +82,13 @@ module.exports = {
                 staffId: staff.id,
                 reason,
                 expires,
-                type: "ban"
+                type: "mute"
             }).save()
 
         } catch(ignored) {
-            return "Cannot ban that user"
+            return "Cannot mute that user"
         }
 
-        return `<@${userId}> has been banned for "${duration}"`
+        return `<@${userId}> has been muted for "${duration}"`
     },
 }

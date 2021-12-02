@@ -1,7 +1,6 @@
 {
   "name": "discord-bot-for-real-now",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,10 +9,20 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "discord.js": "^13.2.0",
-    "mongoose": "^6.0.12",
-    "nodemon": "^2.0.14",
+    "axios": "^0.24.0",
+    "discord.js": "^13.3.1",
+    "mongoose": "^6.0.14",
+    "nodemon": "^2.0.15",
     "path": "^0.12.7",
     "wokcommands": "^1.5.3"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DarkF1reSK/bot.git"
+  },
+  "bugs": {
+    "url": "https://github.com/DarkF1reSK/bot/issues"
+  },
+  "homepage": "https://github.com/DarkF1reSK/bot#readme",
+  "description": ""
 }

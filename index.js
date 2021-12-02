@@ -1,3 +1,4 @@
+//imports
 const {Client, Intents} = require('discord.js')
 const mongoose = require('mongoose')
 const path = require('path')
@@ -10,8 +11,10 @@ const client = new Client({ intents: [
     Intents.FLAGS.GUILD_MESSAGES,
     Intents.FLAGS.GUILD_MESSAGE_REACTIONS,
     Intents.FLAGS.GUILD_PRESENCES,
+    Intents.FLAGS.GUILD_MEMBERS,
   ],    
 })
+
 
 client.on("ready", () => {
     console.log(`logged as ${client.user.tag}!`)
