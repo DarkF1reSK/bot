@@ -29,12 +29,7 @@ client.on("ready", () => {
         testServers: ["704765614627094589", "837762158070071357"],
         botOwners: ["655856108350603267", "544850481109925899"],
         dbOptions,
-        disabledDefaultCommands: [
-            "help",
-            "prefix",
-            "requiredRole",
-            "channelonly",
-        ],
+
         mongoUri: MONGOURI,
     })
     .setDefaultPrefix(PREFIX)
