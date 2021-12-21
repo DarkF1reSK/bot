@@ -12,10 +12,12 @@ const client = new Client({ intents: [
     Intents.FLAGS.GUILD_MESSAGE_REACTIONS,
     Intents.FLAGS.GUILD_PRESENCES,
     Intents.FLAGS.GUILD_MEMBERS,
-  ],    
+    Intents.FLAGS.GUILD_VOICE_STATES,
+  ],
 })
 
-
+module.exports = client
+   
 client.on("ready", () => {
     console.log(`logged as ${client.user.tag}!`)
 
