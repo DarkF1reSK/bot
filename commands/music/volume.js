@@ -5,7 +5,7 @@ module.exports = {
     description: "change or check the volume of the current song",
     category: "music",
     slash: true,
-    testOnly: true,
+
 
     options: [
         {

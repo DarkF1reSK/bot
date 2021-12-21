@@ -4,7 +4,6 @@ module.exports = {
     minArgs: 1,
     expectedArgs: "<status>",
     slash: "both",
-    testOnly: true,
     ownerOnly: true,
 
     callback: ({client, text}) => {

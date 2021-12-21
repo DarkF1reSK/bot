@@ -6,7 +6,7 @@ module.exports = {
     description: "play a song",
     category: "music",
     slash: true,
-    testOnly: true,
+
     options: [
         {
             name: "songtitle",

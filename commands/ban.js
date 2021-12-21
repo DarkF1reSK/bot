@@ -9,7 +9,7 @@ module.exports = {
     expectedArgs: "<user> <duration> <reason>",
     expectedArgsTypes: ["USER", "STRING", "STRING"],
     slash: "both",
-    testOnly: true,
+
 
     callback: async ({args, member: staff, guild, client, message, interaction}) => {
         if(!guild) {

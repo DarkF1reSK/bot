@@ -5,7 +5,7 @@ module.exports = {
     description: "resume the current song",
     category: "music",
     slash: true,
-    testOnly: true,
+
     callback: async ({client, interaction}) => {
         const queue = player.getQueue(interaction.guildId);
 

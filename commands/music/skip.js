@@ -5,7 +5,7 @@ module.exports = {
     description: "skip the current song",
     category: "music",
     slash: true,
-    testOnly: true,
+
     
     callback: async ({client, interaction, args}) => {
         const queue = player.getQueue(interaction.guildId);

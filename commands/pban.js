@@ -5,7 +5,6 @@ module.exports = {
     description: "Permanently ban's a user",
     slash: "both",
     permissions: ["ADMINISTRATOR", "BAN_MEMBERS"],
-    testOnly: true,
     guildOnly: true,
     minArgs: 2,
     expectedArgs: "<user> <reason>",

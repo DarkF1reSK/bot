@@ -8,7 +8,6 @@ module.exports = {
     expectedArgsTypes: ["CHANNEL", "STRING"],
 
     slash: "both",
-    testOnly: true,
     guildOnly: true,
 
     callback: ({message, interaction, args}) => {

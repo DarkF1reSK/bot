@@ -50,7 +50,6 @@ module.exports = {
     description: "display lyrics for the current song or a specific song",
     category: "music",
     slash: true,
-    testOnly: true,
     options: [
         {
             name: "title",

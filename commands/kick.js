@@ -6,7 +6,6 @@ module.exports = {
     description: "Kick's a user",
     slash: "both",
     permissions: ["ADMINISTRATOR", "KICK_MEMBERS"],
-    testOnly: true,
     guildOnly: true,
     minArgs: 2,
     expectedArgs: "<user> <reason>",

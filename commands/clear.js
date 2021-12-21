@@ -5,7 +5,7 @@ module.exports = {
     maxArgs: 1,
     expectedArgs: "[amount]",
     slash: "both",
-    testOnly: true,
+
     
 
     callback: async ({ message, interaction, channel, args }) => {

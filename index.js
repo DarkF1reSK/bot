@@ -28,7 +28,7 @@ client.on("ready", () => {
     new WOKCommands(client, {
         commandsDir: path.join(__dirname, "commands"),
         featuresDir: path.join(__dirname, "features"),
-        testServers: ["704765614627094589", "837762158070071357"],
+        testServers: ["837762158070071357"],
         botOwners: ["655856108350603267", "544850481109925899"],
         dbOptions,
 

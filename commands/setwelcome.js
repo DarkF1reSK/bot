@@ -10,7 +10,7 @@ module.exports = {
     minArgs: 2,
     expectedArgs: "<channel> <text>",
     slash: "both",
-    testOnly: true,
+
 
     options: [{
         name: "channel",
