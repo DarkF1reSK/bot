@@ -24,6 +24,7 @@ client.on("ready", () => {
     const dbOptions = {
         keepAlive: true,
     }
+    
 
     new WOKCommands(client, {
         commandsDir: path.join(__dirname, "commands"),
