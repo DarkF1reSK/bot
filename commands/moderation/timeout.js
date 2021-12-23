@@ -4,7 +4,6 @@ module.exports = {
     category: "moderation",
     description: "timeout a member",
     slash: true,
-    testOnly: true,
     options: [
         {
             name: "user",

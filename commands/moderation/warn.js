@@ -6,7 +6,6 @@ module.exports = {
     description: "warns a member",
     permissions: ["ADMINISTRATOR"],
     slash: true,
-    testOnly: true,
     guildOnly: true,
 
     options: [
