@@ -1,5 +1,5 @@
 const DJS = require("discord.js")
-const welcome = require("../schemas/welcome-schema")
+const welcome = require("../../schemas/welcome-schema")
 
 
 module.exports = {

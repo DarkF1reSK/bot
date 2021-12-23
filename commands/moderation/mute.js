@@ -1,4 +1,4 @@
-const punishmentSchema = require("../schemas/punishment-schema")
+const punishmentSchema = require("../../schemas/punishment-schema")
 
 module.exports = {
     category: "Moderation",
