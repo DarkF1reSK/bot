@@ -1,13 +1,15 @@
+const {TOKEN} = require("../../config.json")
+
 module.exports = {
     description: "Restarts the bot",
     category: "owner",
     slash: true,
     ownerOnly: true,
-    testOnly: true,
-
-    callback: async({interaction}) => {
-        await interaction.reply("Restarting...")
-        process.exit()
-
+    
+    callback: ({interaction, client, channel}) => {
+        interaction.reply("Restarting...")
+        client.destroy()
+        client.login(TOKEN)
+        channel.send("Restared")
     }
 }
