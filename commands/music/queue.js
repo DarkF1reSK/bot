@@ -38,10 +38,5 @@ module.exports = {
             ],
         });
     },
-    get callback() {
-        return this._callback;
-    },
-    set callback(value) {
-        this._callback = value;
-    },
+
 };
