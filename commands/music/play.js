@@ -18,6 +18,7 @@ module.exports = {
     callback: async ({client, interaction}) => {
         const songTitle = interaction.options.getString("songtitle");
 
+
         if (!interaction.member.voice.channel)
             return interaction.followUp({
                 content: "Please join a voice channel first!",

@@ -5,7 +5,6 @@ module.exports = {
     description: "display the song queue",
     category: "music",
     slash: true,
-    testOnly: true,
     callback: async ({ client, interaction }) => {
        const queue = player.getQueue(interaction.guildId);
         if (!queue?.playing)

@@ -1,9 +1,11 @@
 //imports
 const {Client, Intents} = require('discord.js')
+const RPC = require('discord-rpc')
 const mongoose = require('mongoose')
 const path = require('path')
 const {TOKEN, PREFIX, MONGOURI} = require('./config.json')
 const WOKCommands = require("wokcommands")
+
 
 
 const client = new Client({ intents: [
@@ -17,7 +19,8 @@ const client = new Client({ intents: [
 })
 
 module.exports = client
-   
+
+
 client.on("ready", () => {
     console.log(`logged as ${client.user.tag}!`)
 
@@ -29,13 +32,23 @@ client.on("ready", () => {
     new WOKCommands(client, {
         commandsDir: path.join(__dirname, "commands"),
         featuresDir: path.join(__dirname, "features"),
-        testServers: ["837762158070071357"],
+        testServers: ["837762158070071357", "704765614627094589"],
         botOwners: ["655856108350603267", "544850481109925899"],
         dbOptions,
 
         mongoUri: MONGOURI,
+        disabledDefaultCommands: [
+            "help",
+            'command',
+            'language',
+            'prefix',
+            'requiredrole',
+            'channelonly'
+        ]
     })
     .setDefaultPrefix(PREFIX)
 })
+
+
 
 client.login(TOKEN)
