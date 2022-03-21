@@ -1,6 +1,4 @@
-//imports
 const {Client, Intents} = require('discord.js')
-const RPC = require('discord-rpc')
 const mongoose = require('mongoose')
 const path = require('path')
 const {TOKEN, PREFIX, MONGOURI} = require('./config.json')
