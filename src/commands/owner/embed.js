@@ -15,13 +15,11 @@ module.exports = {
         }
     ],
 
-
     callback: async({interaction}) => {
         const hodina = interaction.options.getString("hodina")
         const color = "DARK_PURPLE"
 
-        if(hodina === "slj") {
-            const podm = new MessageEmbed()
+            const slj1 = new MessageEmbed()
                 .setTitle(`**PODSTATNÉ MENÁ**`)
                 .setColor(color)
                 .setTimestamp()
@@ -32,7 +30,7 @@ module.exports = {
                         value: "rod(mužský, ženský, stredný)\nčislo(jednotne, mnozne)\npad(N,G,D,A,L,I)\nvzor(chlap, hrdina, dub, stroj, žena, ulica, dlaň, kosť, mesto, srdce, vysvedčenie, dievča,)\nživotnost{v muzskom rode}(zivotne/nezivotne)\n"
                     },
                 )
-            const pridm = new MessageEmbed()
+            const slj2 = new MessageEmbed()
                 .setTitle(`**PRIDAVNE MENA**`)
                 .setColor(color)
                 .setTimestamp()
@@ -50,7 +48,7 @@ module.exports = {
                         value: "pravidelne: rýchly, rýchlejší, najrýchlejší\nnepravidelne: dobrý, lepsi, najlepsi"
                     },
                 )
-            const neohybslovdruh = new MessageEmbed()
+                const slj3 = new MessageEmbed()
                 .setTitle("**Neohybné slovne druhy**")
                 .setColor(color)
                 .setTimestamp()
@@ -78,10 +76,6 @@ module.exports = {
                 )
 
 
-            return [podm, pridm, neohybslovdruh]
-        }
-
-            if (hodina === "fyz") {
                 const fyz = new MessageEmbed()
                     .setTitle("**Paraelny obvod**")
                     .setColor(color)
@@ -108,13 +102,14 @@ module.exports = {
                             name: "Nazvy: ",
                             value: "I = ele.prud [jednotka amper]\nu = napatie [jednotka volt]\nR = odpor [jednotka ohm]\nP = vykon [jednotka watt]"
                         },
-                        {name: "----------------------------------------", value: "I =I1=I2\n U =U1+U2\nR =R1+R2"},
-                        {name: "----------------------------------------", value: "P =UxI\nP =RxIxI \nP =UxU/R"}
+                        {   name: "----------------------------------------",
+                            value: "I =I1=I2\n U =U1+U2\nR =R1+R2"},
+                        {   name: "----------------------------------------",
+                            value: "P =UxI\nP =RxIxI \nP =UxU/R"},
                     )
-                return [fyz, fyz2]
-            }
+            
 
-            if (hodina === "bio") {
+
                 const bio1 = new MessageEmbed()
                     .setTitle("**Skameneliny a vek zeme**")
                     .setColor(color)
@@ -174,8 +169,226 @@ module.exports = {
                          {name: "Organogénne usadené horniny: ", value: "znikli činnosťou organizmov a z ich zvyškov, patria sem: čierne uhlie, hnedé uhlie, ropa..."},
                          {name: "Chemické usadené horniny: ", value: "vznikli vylúčením rozpustných látok z morskej, jazernej alebo minerálnej vody, patria sem: travertín, kamenná soľ, sadrovec..."}
                      )
+
+
+
+                const che1 = new MessageEmbed()
+                    .setTitle("**Sacharidy**")
+                    .setColor(color)
+                    .setTimestamp()
+                    .setDescription("tvoria súčasť rastlinných a živočíšnych buniek, slúžia ako hlavný zdroj energie")
+                    .addFields(
+                        {
+                            name: "rozdelenie: ",
+                            value: "jednoduché -- zložene: oligosacharidy -- polysacharidy"
+                        },
+                        {
+                            name: "dalej jeben na to, to nejde",
+                            value: "kokotina",
+                        }
+                    )
+
+                const che2 = new MessageEmbed()
+                    .setTitle("**tuky**")
+                    .setColor(color)
+                    .setTimestamp()
+                    .addFields(
+                        {
+                            name: "podla skupenstva delime na: ",
+                            value: "tuhé -- oleje",
+                        },
+                        {
+                            name: "tuhe: ",
+                            value: "Tuhé tuky sú estery prevažne mastných kyselín, ktoré majú v štruktúre len jednoduché väzby. Sem patrí napríklad masť, maslo.",
+                        },
+                        {
+                            name: "oleje: ",
+                            value: "Oleje sú väčšinou estery mastných kyselín, ktoré majú v štruktúre násobné väzby ako napríklad kyselina olejová. Sem patrí napríklad rybí tuk, slnečnicový olej.",
+                        },
+                        {
+                            name: "podla povodu delime na: ",
+                            value: "rastlinne -- zivocisne",
+                        },
+                        {
+                            name: "rastlinne: ",
+                            value: "ziskava sa lisovanim semienok alebo plodov\nneobsahuju choresterol",
+                        },
+                        {
+                            name: "zivocisne: ",
+                            value: "Nachadzaju sa v mlieku, vajíčkach, v mäse",
+                        },
+                    )
+
+                const che3 = new MessageEmbed()
+                    .setTimestamp()
+                    .setTitle("**bielkoviny**")
+                    .setColor(color)
+                    .setDescription("Bielkoviny patria neodmysliteľne medzi najdôležitejšie organické zlúčeniny. Stavebné bielkoviny tvoria telá všetkých organizmov. Imunita organizmu tiež úzko súvisí s bielkovinami.")
+                    .addFields(
+                        {
+                            name: "--",
+                            value: "Sú to viacprvkové organické zlúčeniny.",
+                        },
+                        {
+                            name: "podla tvaru delime na: ",
+                            value: "vláknite -- guľovite",
+                        },
+                        {
+                            name: "funkcia bielkovin: ",
+                            value: "stavebná - sú súčasťou všetkých bunkových membrán.\nmetabolická - katalyzujú všetky reakcie, ktoré prebiehajú v bunke.\ninformačná - tvoria protilátky nevyhnutné pre obranyschopnosť organizmu, sú súčasťou hormónov, ktoré regulujú procesy v  bunkách.",
+                        },
+                    )
+
+                const che4 = new MessageEmbed()
+                    .setTitle("**Kyslikate derivaty**")
+                    .setTimestamp()
+                    .setColor(color)
+                    .addFields(
+                        {
+                            name: "Kyslíkaté deriváty",
+                            value: "Sú deriváty, ktoré majú v charakteristickej skupine atóm kyslíka.",
+                        },
+                        {
+                            name: "Patria tu: ",
+                            value: "hydroxyderiváty, karbonylové zlúčeniny, karboxylové kyseliny.",
+                        },
+                        {
+                            name: "Hydroxyderiváty",
+                            value: "delime ich na: alkoholy -- fenoly ",
+                        },
+                        {
+                            name: "alkoholy",
+                            value: "metanol: je to nebezpečný jed\nbezfarebná kvapalina s charakteristickým zápachom a chuťou podobnou alkoholickým nápojom.\n\netanol: bezfarebná kvapalina s charakteristickým zápachom a chuťou alkoholu\nvyrába sa destiláciou",
+                        }
+                    )
+
+                const che5 = new MessageEmbed()
+                    .setTimestamp()
+                    .setTitle("**derivaty uhlovodikov**")
+                    .setColor(color)
+                    .setDescription("Deriváty uhrovodíkov sú zlúčeniny, ktoré sú odvodené od uhlovodíkov nahradením jedného alebo viacerých atómov vodíka iným atómom alebo funkčnou skupinou. ")
+                    .addFields(
+                        {
+                            name: "--",
+                            value: "patria medzi najrozsirenejsie organicke zluceniny",
+                        },
+                        {
+                            name: "--",
+                            value: "hlovodíkový zvyšok vzniká odtrhnutím 1 alebo viacerých atómov vodíka z molekuly uhrovodíka",
+                        },
+                        {
+                            name: "--",
+                            value: "Charakteristická skupina .:•je atóm alebo skupina atómov, ktora, sa viaže na uhrovodíkovy zvyšok. \n",
+                        },
+                        {
+                            name: "--",
+                            value: "teflonom sa pokrivaju hlinikove panvice, pouzivame drevene lizicky ak sa zacne lupat panvica patri do zberu",
+                        },
+                    )
+
+            
+                const geo1 = new MessageEmbed()
+                     .setTitle("hospodarstvo")
+                     .setTimestamp()
+                     .setColor(color)
+                     .addFields(
+                        {
+                            name: "------------------------------",
+                            value: "je hospodarsky najvyspelejsim statom sveta",
+                        },
+                        {
+                            name: "Pre hospodárstvo USA je typické",
+                            value: "nerastne bohastvo: ropa, uran, zemny plyn\nrudy:zelezo, med, cin\nzemiaky, kukurica, psenica",
+                        },
+                        {
+                            name: "Panamericka dialnica:",
+                            value: "prepaja celu ameriku",
+                        }
+                  )
+                const geo2 = new MessageEmbed()
+                    .setTitle("obyvatelstvo")
+                    .setTimestamp()
+                    .setColor(color)
+                    .addFields(
+                        {
+                            name: "zije tam viac ako 300m obyvatelov",
+                            value: "Uradnym jazykom je anglictina",
+                        },
+                        {
+                            name: "-------------------------------------",
+                            value: "70% bielych\n 12% ciernych\n 11% latinskeho povodu\n4% azijskeho povodu",
+                        },
+                        {
+                            name: "povodny obyvatelia",
+                            value: "indiani a eskimaci",
+                        },
+                        {
+                            name: "najviac osidlena je vychodna cast",
+                            value: "zivotna uroven obyvatelov USA sa zaraduje medzi najvyssie na svete",
+                        },
+                    )
+                const geo3 = new MessageEmbed()
+                    .setTitle("Mesta")
+                    .setTimestamp()
+                    .setColor(color)
+                    .addFields(
+                        {
+                            name: "Hlavne mesto Washington D.C.",
+                            value: "Najvacsie mesto New York",
+                        },{
+                            name: "idk kde to dat",
+                            value: "naj. mesta: sao paulo,\nMexico: Ciuad de mexico\nEquador: quito\nPeru: lima\nBrazilia: brasil\nBolivia: la Paz",
+                        }
+                    )
+                const geo4 = new MessageEmbed()
+                      .setTitle("Canada")
+                      .setTimestamp()
+                      .setColor(color)
+                      .addFields(
+                        {
+                            name: "Hlavne mesto: Otawa",
+                            value: "Naj. mesto: Toronto",
+                        },{
+                            name: "--------------------------------",
+                            value: "10 provincii ||| 3 teritoria",
+                        },{
+                            name: "Uradny jazyk: ",
+                            value: "Anglictina, Francuzstina",
+                        },{
+                            name: "--------------------------------",
+                            value: "rozloha: 9.9m km2",
+                        },{
+                            name: "provincia: ",
+                            value: "spravna uzemna jednotka",
+                        },{
+                            name: "terutorium: ",
+                            value: "obvod, uzemny celok (oblasti)",
+                        },{
+                            name: "najznamejsie narodne parky: ",
+                            value: "Jasper, buffalo,",
+                        },{
+                            name: "Naj. osidlena na hraniciach usa",
+                            value: "zije tu vela pristahovalcov",
+                        },
+                      )
+
+
+            if (hodina === "slj") {
+                return [slj1, slj2, slj3]
+            }
+            if(hodina === "fyz") {
+                return [fyz, fyz2]
+            }
+            if(hodina === "bio") {
                 return [bio1, bio2, bio3, bio4, bio5]
             }
-
+            if(hodina === "che") {
+                return [che1, che2, che3, che4, che5]
+            }
+            if(hodina === "geo") {
+                return [geo1, geo2,geo3,geo4]
+            }
+            
+        
     }
 }

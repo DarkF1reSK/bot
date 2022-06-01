@@ -1,12 +1,14 @@
-const {Client, Intents} = require('discord.js')
+const discord = require('discord.js')
 const mongoose = require('mongoose')
 const path = require('path')
 const {TOKEN, PREFIX, MONGOURI} = require('./config.json')
 const WOKCommands = require("wokcommands")
+const {Intents} = discord
 
 
 
-const client = new Client({ intents: [
+
+const client = new discord.Client({ intents: [
     Intents.FLAGS.GUILDS,
     Intents.FLAGS.GUILD_MESSAGES,
     Intents.FLAGS.GUILD_MESSAGE_REACTIONS,
@@ -16,7 +18,6 @@ const client = new Client({ intents: [
   ],
 })
 
-module.exports = client
 
 
 client.on("ready", () => {
@@ -48,5 +49,5 @@ client.on("ready", () => {
 })
 
 
-
+module.exports = client
 client.login(TOKEN)
