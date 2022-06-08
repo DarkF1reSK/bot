@@ -1,10 +1,13 @@
 const { QueryType } = require("discord-player");
 const player = require("../../client/player");
 
+
+
 module.exports = {
     name: "play",
     description: "play a song",
     category: "music",
+    testOnly: true,
     slash: true,
 
     options: [

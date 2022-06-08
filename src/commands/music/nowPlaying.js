@@ -1,5 +1,7 @@
 const player = require("../../client/player");
 
+
+
 module.exports = {
     name: "now-playing",
     description: "shows information about the current song",
