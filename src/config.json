@@ -1,7 +1,7 @@
 {
-    "TOKEN": "OTIyODMyMDU3NDc2OTg4OTM4.GcuEiD.hd_DNdAY-iKF3SuZ7dRYio269wL-W4CdLuoRwY",
-    "testtoken": "OTcyMzk4NjY5NDQ3OTYyNzI0.GSkZW8.Ns8vg3fskhpmZLWsAa2CXpJj291lxrpo5bmoyI",
-    "originaltoken": "OTIyODMyMDU3NDc2OTg4OTM4.GcuEiD.hd_DNdAY-iKF3SuZ7dRYio269wL-W4CdLuoRwY",
+    "TOKEN": "OTcyMzk4NjY5NDQ3OTYyNzI0.GSSUj5.D3QnIBMFzXqd8kwm9bnSCS2bBByN3XCm63rW6o",
+    "testtoken": "OTcyMzk4NjY5NDQ3OTYyNzI0.GSSUj5.D3QnIBMFzXqd8kwm9bnSCS2bBByN3XCm63rW6o",
+    "originaltoken": "OTIyODMyMDU3NDc2OTg4OTM4.GUs0Dd.RQCWzFAY5Fd636H5Rrkt9hfsr6wv9yQleUuZMY",
     "PREFIX": "=",
     "MONGOURI": "mongodb+srv://D_4_r_k:gEjmrovec1@discord.lmpne.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
 }
